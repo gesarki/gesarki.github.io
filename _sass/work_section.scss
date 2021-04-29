@@ -1,0 +1,56 @@
+.work-section {
+    .carousel-caption {
+        position: relative;
+        left: 0;
+        top: 0;
+        min-height: 17ch; // always a little over 2 lines of description
+    }
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        background-color: #000000;
+        border-radius: 100%;
+        border: 3px solid #00000000;
+    }
+    .btn:focus {
+        box-shadow: none;
+    }
+    .tech-logo {
+        // color is set in work_section.html
+        font-size: 48px;
+    }
+    .tech-logo:hover {
+        transform: rotate(359deg);
+    }
+    a {
+        color: inherit;
+        transition: all linear 0.1s;
+    }
+    a .glow {
+        filter: drop-shadow(0px 0px 6px white);
+    }
+    a:hover {
+        filter: drop-shadow(0px 0px 6px white);
+        color: inherit;
+        transform: rotate(359deg);
+    }
+    .tech-section {
+        overflow-y: scroll;
+        max-height: 500px;
+    }
+    /* Works on Firefox */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: rgb(184, 184, 184) #00000000;
+    }
+    /* Works on Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 8px;
+    }
+    *::-webkit-scrollbar-track {
+        background-color: #00000000;
+    }
+    *::-webkit-scrollbar-thumb {
+        background-color: rgba(231, 231, 231, 0.678);
+        border-radius: 20px;
+    }
+}

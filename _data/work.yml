@@ -1,0 +1,236 @@
+- employer: LIVE Competition
+  position: VP of Engineering
+  from-to: May 2020 - Feb 2021
+  description: |
+    After helping out the year prior as a junior developer, I was offered the role of
+    VP of LIVE Competition, a business case competition run by students at U of T Scarborough. 
+    I lead a team of 9 student developers to upgrade our existing competition management software,
+    Blueboard, built by the previous engineering team, in order to make it more suitable for running
+    virtual competitions. With feedback from the VPs of the other departments, we designed, implemented 
+    and tested several cool new features including group chats and real-time conference call 
+    reminder pop-ups.
+
+  images:
+    - image: assets/images/LIVE/bb-rooms-close.webp
+      label: "Blueboard Rooms: real-time group chats"
+      description: Group chats allowed delegates to communicate with their team, as well as judges, sponsors and organizers.
+    - image: assets/images/LIVE/popup-public.webp
+      label: Video-call reminder pop-ups
+      description: Popups would show up on user's screens whenever there was an event happening.
+    - image: assets/images/LIVE/popup-pls-wait.webp
+      label: Judging call reminder
+      description: Special reminders allows specific teams to join only when it's their turn to be evaluated.
+    - image: assets/images/LIVE/popup-your-turn.webp
+      label: Your turn!
+      description: Dynamic reminders undergo a visual change when a team gains access to a room.
+  technologies:
+    - icon: bx-bxl-django
+      name: django
+      website: "https://djangoproject.org"
+      description: Django was used to model complex relations with users, teams, submissions and evaluations, and also create a front-end API using and <a href="https://www.django-rest-framework.org/">Django REST Framework</a>.
+    - icon: bx-bxl-angular
+      website: "https://angular.io/"
+      name: angular
+      description: We used Angular in the front-end to create a responsive UI. It was also used to easily integrate things like paypal payments, forms and chat boxes.
+    - icon: bx-bxl-kubernetes
+      name: kubernetes
+      website: "https://kubernetes.io/"
+      description: The web-app was hosted on <a href="https://cloud.google.com/kubernetes-engine">Google Kubernetes Engine</a> for container orchestration, allowing us to write smaller services that scale individually according to their loads.
+    - icon: bx-bxl-firebase
+      name: firebase
+      website: "https://firebase.google.com/"
+      description: We used Firebase to power our group chats, since it handles sending updates to the clients in real-time.
+    - icon: bx-bxl-google-cloud
+      name: GCP
+      website: "https://cloud.google.com/"
+      description: GCP (and their <a href="https://cloud.google.com/free">$300 in free credits</a> for students) was helpful for hosting our kubernetes cluster and databases, as well as providing alerts if anything went wrong.
+    - icon: bx-bxl-gitlab
+      name: GitLab CI
+      website: "https://about.gitlab.com/topics/ci-cd/"
+      description: We took advantage of GitLab's generous free tier for all our CI/CD needs, including running unit-tests, and tagging branches and deploying to our development and production environments.
+    
+  background: "#0DA8FF"
+  accent: "#008BD9"
+  foreground: "#FFFFFF"
+
+- employer: University College LIT
+  position: Webmaster
+  from-to: May 2019 - Present
+  description: |
+    Having seen the UC LIT’s outdated CMS and website design which hasn’t changed since 2013, I offered 
+    to rewrite it from scratch using jekyll. Their website was perfect for jekyll because it was essentially
+    static save for a couple pages which needed to be updated every couple months. The data for these pages 
+    could easily be stored on YAML files, to be loaded on site generation.
+
+    Since the generated site was now static and we removed the need for a dedicated CMS, we saved $120 per year 
+    on hosting fees by switching to github pages, an 88% decrease in website costs. 
+
+    Now the council can directly update about 80% of the content on the site without involving the webmaster, 
+    by changing  the YAML files in the github repo. I’ve also included detailed guides on how to update each part of 
+    the website via the YAML files.
+
+  images:
+    - image: assets/images/uclit/uclit.ca_.webp
+      label: Homepage
+      description: University College Literary and Athletics Society
+    - image: assets/images/uclit/uclit.ca_get-involved_clubs-and-ancillaries.webp
+      label: Clubs and Ancillaries
+      description: Dynamically displays information on clubs in UC.
+    - image: assets/images/uclit/uclit.ca_get-involved_commissions.webp
+      label: Commissions
+      description: Presents the commissions available to which UC students can refer.
+    - image: assets/images/uclit/uclit.ca_resources_budgets-documents.webp
+      label: Documents
+      description: Documents such as budgets and meeting minutes are available on the website for transparency.
+  technologies:
+    - icon: cib-jekyll
+      name: Jekyll
+      website: "https://jekyllrb.com/"
+      description: Jekyll is used to generate the static site, since its fast and only needs to be done once when we update the site. Also it allows  us to store data in yaml files that are easily editable by non-technical comissioners.
+    - icon: cib-github
+      name: Github Pages
+      website: "https://pages.github.com/"
+      description: I used github pages for hosting the website. Using <a href="https://github.com/features/actions">Github Actions</a>, we are able to rebuild the website anytime we change its source. Also, github's in-browser file editor lets comissioners update the website without the need to clone the repo locally.
+    - icon: cib-bootstrap
+      name: Bootstrap
+      website: "https://getbootstrap.com/"
+      description: I implemented the UI of the website using the Bootstrap front-end framework, for consistent, responsive styling and DRY code.
+
+  background: "#AD1A1A"
+  accent: "#921b1b"
+  foreground: "#FFFFFF"
+
+- employer: Impact Conference
+  position: 1st Place Winners
+  from-to: June 2020
+  description: |
+    In order to get an idea of how to run a virtual case competition, a couple of the LIVE VPs and I joined Impact Conference.
+    One of the tasks we were given was to make a website for a commercial furnishing company. I used react for the UI, and
+    integrated Algolia's search library in order to store the product database and easily provide filtering functionality.
+
+    
+  images:
+    - image: assets/images/impact-conf/impact-conf.webp
+      label: Store website with search and filter functionality
+      description: Using React and Algolia, I wrote a website allowing you to search and filter the products in Hollend furnishing's catalogue.
+    - image: assets/images/impact-conf/impact-conf-certificate.webp
+      label: First place certificate
+      description: Our team one first place overall at the case competition.
+    
+  technologies:
+    - icon: logos-algolia
+      name: Algolia
+      website: "https://www.algolia.com/"
+      description: Algolia was really the star of this project! I used their 's AI-powered search and discovery API to implement search for the store. Algolia's API allowed me to easily add filtering criteria, search highlighting and even typo tolerance.
+      glowing: true 
+    - icon: cib-react
+      name: React
+      website: "https://reactjs.org/"
+      description: React js was used for the UI elements because of its tight integration with Algolia. Although I was not very familiar with the framework before, I learned it because of how easy it made integrating with Algolia. 
+    - icon: cib-github
+      name: Github Pages
+      website: "https://pages.github.com/"
+      description: Since we store everything in Algolia and they take care of filtering functionality, the website is essentially static, allowing me to host it on github pages. You can find it <a href="https://gesarki.github.io/impact-conference">here</a>.
+
+  background: "#1b9bc3"
+  accent: "#2c8aa8"
+  foreground: "#FFFFFF"
+
+- employer: Algosys (ION Group)
+  position: C#/.NET Developer Co-op
+  from-to: May 2019 - August 2019
+  description: |
+    For my last co-op I worked at a small company in Quebec City called Algosys, that develops software 
+    for metallurgical accounting. 
+
+    <button class="btn-primary btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Read More</button>
+    <br>
+
+    This was a challenging one in several ways. Firstly, it was my first time working in another language: 
+    we spoke french in the office, which really helped me remember my french from my French Immersion days.
+    Additionally, the business side of things was a big challenge to understand. As usual, it takes time to 
+    figure out a product when you start working on it but since this one had an especially niche market, I got 
+    to learn a lot about the metallurgical accounting and mineral processing domains to really understand the 
+    needs of our clients. Finally, it was my first time working in C#.NET framework, with all its perks and 
+    built-in conveniences. Let's just say it'll be hard to go back to java after this...
+
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel">Metallurgical Accounting, Algosys</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        Metallurgical accounting is a very niche market serving large mineral processing plants which
+        need to generate mass balance sheets, in order to track the materials they've used and extracted from
+        the ground. Usually governments require this information from the companies, specifying a minimum degree
+        of certainty for each report. Because of the difficulty in acheiving this certainty due largely to the
+        poor reliability of the sensors used in the processing system, complex algorithms are needed that take
+        all the inputs and outputs into account, along with their reliability index, to generate a precise
+        estimate. Algosys is one such company that offers a reliable algorithm for generating reports, and 
+        serves many big players in the mining, refinery and oil sector.
+      </div>
+    </div>
+    
+  images:
+    - image: assets/images/algosys/ion-logo.webp
+      label: Ion Group
+      description: Algosys was acquired by ION Group, a group of companies providing automation solutions to a variety of different sectors.
+    - image: assets/images/algosys/20190720_191612.webp
+      label: Quebec City, QC, Canada
+      description: It was my first time working in a completely French-speaking office. Trop cool!
+    - image: assets/images/algosys/20190627_181329.webp
+      label: Quebec City, QC, Canada
+      description: It was my first time working in a completely French-speaking office. Trop cool!
+    
+  technologies:
+    - icon: cib-typescript
+      name: Typescript
+      website: "https://www.typescriptlang.org/"
+      description: We used typscript in the front-end and I learned the advantages of using a strongly-typed language like code validation, better documentation, etc.
+    - icon: cib-dot-net
+      name: Microsoft .NET framework
+      website: "https://dotnet.microsoft.com/"
+      description: I worked with C# and the .NET framework in Visual Studio to maintain the back-end, squash bugs, and add new features.
+    - icon: openmoji-quebec-flag
+      name: French
+      website: "#"
+      description: I also got to practice my french in a completely french-speaking environment! I'm happy to say communication wasn't an issue during this co-op.
+
+  background: "#FFFFF"
+  accent: "#2e5cff"
+  foreground: "#002AC0"
+
+
+- employer: CIBC
+  position: Junior Developer Co-op
+  from-to: Jan 2018 - August 2018
+  description: |
+    I had my first co-op at CIBC as a developer on one of their private wealth management branches, Wood Gundy.
+    I worked in a scrum team to improve and maintain an Internal web-app for onboarding new clients. Although it
+    was originally scheduled to last only 4 months, after the first month my supervisor asked to extend my term
+    by another 4 months.
+
+    
+  images:
+    - image: assets/images/CIBC/CIBC-logo.webp
+      label: CIBC Wood Gundy
+      description: For my first co-op I worked at CIBC for their Wood Gundy onboarding web-app.
+    
+  technologies:
+    - icon: cib-java
+      name: Java
+      website: "https://www.oracle.com/ca-en/java/technologies/java-ee-glance.html"
+      description: I worked mainly on the back-end for the majority of this co-op, which was implemented in Java.
+    - icon: cib-eclipseide
+      name: Eclipse IDE
+      website: "https://www.eclipse.org/ide/"
+      description: Due to the amount of work I was doing in java, I learned a lot about the Eclipse IDE. One of the main things I learned was how to use it to connect to remote JREs in order to perform debugging on test environments.
+    - icon: carbon-sql
+      name: SQL
+      website: "#"
+      description: This co-op was the first time I was thoroughly exposed to relational databases. I learned SQL queries and table manipulations in order to query and insert data for setting up tests.
+
+  background: "#B00B1C"
+  accent: "#921b1b"
+  foreground: "#FFFFFF"

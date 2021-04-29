@@ -1,0 +1,14 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: home
+---
+{% include opening_animation.html %}
+
+{% for worki in site.data.work %}
+
+{% include work_section.html work=worki %}
+
+{% endfor %}
+
+<p>This is in the index after opening-animation</p>
