@@ -1,0 +1,28 @@
+<div class="container" id="work-bubbles">
+    <div class="row">
+
+    {% for work in site.data.work %}
+
+    <div class="col-md-4 col-sm-12 bubble-col mx-auto">
+        <img src="{{ work.images.first.image }}" class="img-fluid bubble-image">
+        
+        <div class="rotator">
+        {% for tech in work.technologies %}
+
+        <div class="logo-rotate" style="--items:{{ forloop.length }}; --index:{{ forloop.index }};">
+        <span class="iconify tech-logo{% if tech.glowing %}glow{% endif %}" 
+              data-icon="{{ tech.icon }}" 
+              style="color: {{ work.background }};"
+              ></span>
+        </div>
+
+        {% endfor %}
+        </div>
+        <h3 class="name-popup">{{ work.employer }}</h3>
+
+    </div>
+
+    {% endfor %}
+
+    </div>
+</div>

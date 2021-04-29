@@ -1,0 +1,82 @@
+#work-bubbles {
+    .bubble-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, .15)!important;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+    .rotator {
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        animation: rotations 6s linear infinite;
+        top: 50%;
+        left: 50%;
+    }
+    .logo-rotate {
+        position: absolute;
+        top: -1.5rem;
+        left: -1.5rem;
+        transform: rotate(calc((360/(var(--items))) * (var(--index)) * 1deg));
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        filter: drop-shadow(0 0.2rem 0.2rem rgba(0, 0, 0, 0.25));
+        // opacity: 0%;
+        z-index: 0;
+    }
+    .bubble-col:hover .logo-rotate {
+        transform: rotate(calc((360/(var(--items))) * (var(--index)) * 1deg)) translate(0px, 150px);
+        // opacity: 100%;
+    }
+    .bubble-col:hover .bubble-image {
+        width: 250px;
+        height: 250px;
+        box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, .15)!important;
+        animation-name: hoverpulse;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .bubble-col {
+        height: 300px;
+        position: relative;
+    }
+    .tech-logo {
+        font-size: 3rem;
+    }
+    .name-popup {
+        width: fit-content;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0%;
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .bubble-col:hover .name-popup {
+        top: -20%;
+        opacity: 100%;
+    }
+    @keyframes rotations {
+        to {
+            transform: rotate(360deg)
+        }
+    }
+    @keyframes hoverpulse {
+        0% {
+            transform: translate(-50%, -50%);
+        }
+        25% {
+            transform: translate(-50%, -52%);
+        }
+        75% {
+            transform: translate(-50%, -49%);
+        }
+    }
+}

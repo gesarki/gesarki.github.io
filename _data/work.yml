@@ -87,14 +87,14 @@
       name: Jekyll
       website: "https://jekyllrb.com/"
       description: Jekyll is used to generate the static site, since its fast and only needs to be done once when we update the site. Also it allows  us to store data in yaml files that are easily editable by non-technical comissioners.
-    - icon: cib-github
-      name: Github Pages
-      website: "https://pages.github.com/"
-      description: I used github pages for hosting the website. Using <a href="https://github.com/features/actions">Github Actions</a>, we are able to rebuild the website anytime we change its source. Also, github's in-browser file editor lets comissioners update the website without the need to clone the repo locally.
     - icon: cib-bootstrap
       name: Bootstrap
       website: "https://getbootstrap.com/"
       description: I implemented the UI of the website using the Bootstrap front-end framework, for consistent, responsive styling and DRY code.
+    - icon: cib-github
+      name: Github Pages
+      website: "https://pages.github.com/"
+      description: I used github pages for hosting the website. Using <a href="https://github.com/features/actions">Github Actions</a>, we are able to rebuild the website anytime we change its source. Also, github's in-browser file editor lets comissioners update the website without the need to clone the repo locally.
 
   background: "#AD1A1A"
   accent: "#921b1b"
