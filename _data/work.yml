@@ -127,7 +127,7 @@
     - icon: logos-algolia
       name: Algolia
       website: "https://www.algolia.com/"
-      description: Algolia was really the star of this project! I used their 's AI-powered search and discovery API to implement search for the store. Algolia's API allowed me to easily add filtering criteria, search highlighting and even typo tolerance.
+      description: Algolia was really the star of this project! I used their AI-powered search and discovery API to implement search for the store. Algolia's API allowed me to easily add filtering criteria, search highlighting and even typo tolerance.
       glowing: true 
     - icon: cib-react
       name: React

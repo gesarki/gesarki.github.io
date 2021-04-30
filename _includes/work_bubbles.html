@@ -1,10 +1,10 @@
-<div class="container mt-3" id="work-bubbles">
+<div class="container my-3" id="work-bubbles">
     <div class="row">
 
     {% for work in site.data.work %}
 
     <div class="col-md-4 col-sm-12 bubble-col mx-auto">
-        <img src="{{ work.images.first.image }}" class="img-fluid bubble-image">
+        
         
         <div class="rotator">
         {% for tech in work.technologies %}
@@ -20,29 +20,32 @@
         </div>
         <h4 class="hidden-popup up">{{ work.position }}</h4>
         <h4 class="hidden-popup down">{{ work.from-to }}</h4>
+        {% capture work_id %}{{ work.employer | slugify }}{{ work.position | slugify }}{% endcapture %}
+        {% capture modal_id %}{{ work_id }}-modal{% endcapture %}
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
-        </button>
+        <a type="button" data-bs-toggle="modal" data-bs-target="#{{ modal_id }}">
+            <img src="{{ work.images.first.image }}" class="img-fluid bubble-image">
+        </a>
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="{{ modal_id }}" tabindex="-1" aria-labelledby="{{ modal_id }}Label" aria-hidden="true">
         <div class="modal-dialog modal-xl">
-            <div class="modal-content border-10">
+            <div class="modal-content border-0 border-10">
                 <div class="modal-header border-0">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h3 class="modal-title typewriter ms-2" id="{{ modal_id }}Label"
+                        style="color: {{ work.background }}; --len: {{work.position | size}};">{{ work.position }}</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-0">
-                    <div class="container-fluid m-0" style="color: {{ work.background }};">
+                    <div class="container-fluid">
                         <div class="row">
-                            <h2>{{ work.position }}</h2>
-                            <h3 class="employer-name-heading">{{ work.employer }}</h3>
+                            <h4 class="employer-name-heading typewriter ms-3"
+                                style="color: {{ work.background }}; --len: {{work.employer | size}};">{{ work.employer }}</h4>
                         </div>
 
                         <div class="row mt-3">
                             <div class="col-md-5 mb-3">
-                                {% capture carousel_id %}{{ work.employer | slugify }}{{ work.position | slugify }}{% endcapture %}
+                                {% capture carousel_id %}{{ work_id }}-carousel{% endcapture %}
                                 <div id="{{ carousel_id }}" class="carousel slide" data-bs-ride="carousel">
                                     <div class="carousel-indicators">
                                         {% for image in work.images %}
@@ -73,7 +76,8 @@
                                 </div>
                             </div>
                             <div class="col-md-7">
-                                <h4>{{ work.from-to }}</h4>
+                                <h4 class="typewriter"
+                                    style="--len: {{work.from-to | size}};">{{ work.from-to }}</h4>
                                 <p>{{ work.description }}</p>
                                 <div class="tech-section">
                                     {% for tech in work.technologies %}
