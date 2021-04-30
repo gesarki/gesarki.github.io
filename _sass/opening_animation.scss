@@ -1,12 +1,12 @@
 #opening-animation {
     .container {
-        height: calc(100vh - 118px);
+        // height: calc(100vh - 118px);
         position: relative;
     }
     .check-it-out {
-        position: absolute;
-        bottom: 0px;
-        width: 100%;
+        // position: absolute;
+        // bottom: 0px;
+        // width: 100%;
         .breathe {
             animation-name: blinkTextCursor;
             animation-delay: 10s;

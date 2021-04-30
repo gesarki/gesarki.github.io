@@ -1,4 +1,4 @@
-<div class="container" id="work-bubbles">
+<div class="container mt-3" id="work-bubbles">
     <div class="row">
 
     {% for work in site.data.work %}
@@ -18,11 +18,92 @@
 
         {% endfor %}
         </div>
-        <h3 class="name-popup">{{ work.employer }}</h3>
+        <h4 class="hidden-popup up">{{ work.position }}</h4>
+        <h4 class="hidden-popup down">{{ work.from-to }}</h4>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content border-10">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="container-fluid m-0" style="color: {{ work.background }};">
+                        <div class="row">
+                            <h2>{{ work.position }}</h2>
+                            <h3 class="employer-name-heading">{{ work.employer }}</h3>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-5 mb-3">
+                                {% capture carousel_id %}{{ work.employer | slugify }}{{ work.position | slugify }}{% endcapture %}
+                                <div id="{{ carousel_id }}" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        {% for image in work.images %}
+                                        <button type="button" data-bs-target="#{{ carousel_id }}" data-bs-slide-to="{{ forloop.index0 }}" {% if forloop.first == true %}class="active" aria-current="true"{% endif %} aria-label="Slide {{ forloop.index }}"></button>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="carousel-inner rounded shadow" style="background-color: {{ work.accent }};">
+                                        {% for slide in work.images %}
+                                        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                                            <a href="{{ slide.image }}" data-lightbox="{{ carousel_id }}-lightbox">
+                                                <img src="{{ slide.image }}" class="d-block w-100" alt="{{ work.employer }} - image {{ forloop.index }}">
+                                            </a>
+                                            <div class="carousel-caption d-md-block p-3">
+                                                <h5>{{ slide.label }}</h5>
+                                                <p>{{ slide.description }}</p>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#{{ carousel_id }}" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#{{ carousel_id }}" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <h4>{{ work.from-to }}</h4>
+                                <p>{{ work.description }}</p>
+                                <div class="tech-section">
+                                    {% for tech in work.technologies %}
+                                    <hr>
+                                    <div class="d-flex {% cycle "flex-row", "flex-row-reverse" %} mb-3">
+                                        <div class="p-2" data-bs-toggle="tooltip" title="{{ tech.name }}">
+                                            <a href="{{ tech.website }}">
+                                                <span class="iconify tech-logo {% if tech.glowing %}glow{% endif %}" data-icon="{{ tech.icon }}" style="color: {{ work.background }}"></span>
+                                            </a>
+                                        </div>
+                                        <div class="p-2">{{ tech.description }}</div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
 
     </div>
 
     {% endfor %}
+
+
+
 
     </div>
 </div>
