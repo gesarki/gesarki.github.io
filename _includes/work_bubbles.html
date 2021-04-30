@@ -1,4 +1,4 @@
-<div class="container my-3" id="work-bubbles">
+<div class="container my-5" id="work-bubbles">
     <div class="row">
 
     {% for work in site.data.work %}
@@ -24,7 +24,7 @@
         {% capture modal_id %}{{ work_id }}-modal{% endcapture %}
         <!-- Button trigger modal -->
         <a type="button" data-bs-toggle="modal" data-bs-target="#{{ modal_id }}">
-            <img src="{{ work.images.first.image }}" class="img-fluid bubble-image">
+            <img src="{{ work.thumbnail }}" class="img-fluid bubble-image">
         </a>
 
         <!-- Modal -->
@@ -81,6 +81,7 @@
                                 <p>{{ work.description }}</p>
                                 <div class="tech-section">
                                     {% for tech in work.technologies %}
+                                    {% if tech.description %}
                                     <hr>
                                     <div class="d-flex {% cycle "flex-row", "flex-row-reverse" %} mb-3">
                                         <div class="p-2" data-bs-toggle="tooltip" title="{{ tech.name }}">
@@ -90,6 +91,7 @@
                                         </div>
                                         <div class="p-2">{{ tech.description }}</div>
                                     </div>
+                                    {% endif %}
                                     {% endfor %}
                                 </div>
                             </div>

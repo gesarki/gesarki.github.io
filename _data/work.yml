@@ -10,10 +10,9 @@
     and tested several cool new features including group chats and real-time conference call 
     reminder pop-ups.
 
+  thumbnail: assets/images/LIVE/bb-rooms-square.webp
+
   images:
-    - image: assets/images/LIVE/bb-rooms-square.webp
-      label: "Blueboard Rooms: real-time group chats"
-      description: Group chats allowed delegates to communicate with their team, as well as judges, sponsors and organizers.
     - image: assets/images/LIVE/bb-rooms-close.webp
       label: "Blueboard Rooms: real-time group chats"
       description: Group chats allowed delegates to communicate with their team, as well as judges, sponsors and organizers.
@@ -72,10 +71,9 @@
     by changing  the YAML files in the github repo. I’ve also included detailed guides on how to update each part of 
     the website via the YAML files.
 
+  thumbnail: assets/images/uclit/uclit.ca_square.webp
+
   images:
-    - image: assets/images/uclit/uclit.ca_square.webp
-      label: Homepage
-      description: University College Literary and Athletics Society
     - image: assets/images/uclit/uclit.ca_.webp
       label: Homepage
       description: University College Literary and Athletics Society
@@ -88,6 +86,7 @@
     - image: assets/images/uclit/uclit.ca_resources_budgets-documents.webp
       label: Documents
       description: Documents such as budgets and meeting minutes are available on the website for transparency.
+
   technologies:
     - icon: cib-jekyll
       name: Jekyll
@@ -114,6 +113,7 @@
     One of the tasks we were given was to make a website for a commercial furnishing company. I used react for the UI, and
     integrated Algolia's search library in order to store the product database and easily provide filtering functionality.
 
+  thumbnail: assets/images/impact-conf/impact-conf.webp
     
   images:
     - image: assets/images/impact-conf/impact-conf.webp
@@ -178,10 +178,10 @@
       </div>
     </div>
     
+  thumbnail: assets/images/algosys/ion-square.png
+
+
   images:
-    - image: assets/images/algosys/ion-square.png
-      label: Ion Group
-      description: Algosys was acquired by ION Group, a group of companies providing automation solutions to a variety of different sectors.
     - image: assets/images/algosys/ion-logo.webp
       label: Ion Group
       description: Algosys was acquired by ION Group, a group of companies providing automation solutions to a variety of different sectors.
@@ -193,6 +193,7 @@
       description: It was my first time working in a completely French-speaking office. Trop cool!
     
   technologies:
+    - icon: teenyicons-c-sharp-solid
     - icon: cib-typescript
       name: Typescript
       website: "https://www.typescriptlang.org/"
@@ -221,15 +222,15 @@
     by another 4 months.
 
     
+  thumbnail: assets/images/CIBC/CIBC-square.png
+
   images:
-    - image: assets/images/CIBC/CIBC-square.png
-      label: CIBC Wood Gundy
-      description: For my first co-op I worked at CIBC for their Wood Gundy onboarding web-app.
     - image: assets/images/CIBC/CIBC-logo.webp
       label: CIBC Wood Gundy
       description: For my first co-op I worked at CIBC for their Wood Gundy onboarding web-app.
     
   technologies:
+    - icon: cib-javascript
     - icon: cib-java
       name: Java
       website: "https://www.oracle.com/ca-en/java/technologies/java-ee-glance.html"
