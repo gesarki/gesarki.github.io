@@ -1,7 +1,9 @@
 #opening-animation {
     .container {
         // height: calc(100vh - 118px);
-        position: relative;
+        // position: relative;
+        width: 100vw;
+        // overflow: hidden;
     }
     .check-it-out {
         // position: absolute;
@@ -21,11 +23,12 @@
         background-position-y: 572px;
     }
     .line {
-        font-family: monospace;
-        font-size: xx-large;
+        font-family: 'Ubuntu mono', monospace;
+        font-size: clamp(1.6rem, calc(1.4615rem + 0.6154vw), 2rem);
         border-right: 2px solid rgba(0, 0, 0, 0.75);
         white-space: nowrap;
         overflow: hidden;
+        // box-sizing: content-box;
     }
     .line-1 {
         animation-duration: 400ms, 1s;

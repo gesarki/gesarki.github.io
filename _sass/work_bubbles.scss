@@ -101,7 +101,7 @@
     // aos custom animation
     .modal .typewriter {
         // setup
-        font-family: monospace;
+        font-family: 'Ubuntu mono', monospace;
         // font-size: xx-large;
         border-right: 2px solid rgba(0, 0, 0, 0.75);
         white-space: nowrap;
@@ -129,5 +129,9 @@
         100% {
             border-right-color: transparent;
         }
+    }
+    .modal {
+        max-width: 100vw;
+        max-height: 100vh;
     }
 }
