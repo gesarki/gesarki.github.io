@@ -46,7 +46,7 @@
                         <div class="row mt-3">
                             <div class="col-md-5 mb-3">
                                 {% capture carousel_id %}{{ work_id }}-carousel{% endcapture %}
-                                <div id="{{ carousel_id }}" class="carousel slide" data-bs-ride="carousel">
+                                <div id="{{ carousel_id }}" class="carousel slide" data-bs-ride="carousel" data-bs-touch="false">
                                     <div class="carousel-indicators">
                                         {% for image in work.images %}
                                         <button type="button" data-bs-target="#{{ carousel_id }}" data-bs-slide-to="{{ forloop.index0 }}" {% if forloop.first == true %}class="active" aria-current="true"{% endif %} aria-label="Slide {{ forloop.index }}"></button>
