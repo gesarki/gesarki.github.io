@@ -51,9 +51,7 @@
       website: "https://about.gitlab.com/topics/ci-cd/"
       description: We took advantage of GitLab's generous free tier for all our CI/CD needs, including running unit-tests, and tagging branches and deploying to our development and production environments.
     
-  background: "#0DA8FF"
-  accent: "#008BD9"
-  foreground: "#FFFFFF"
+  accent: "#0DA8FF"
 
 - employer: University College LIT
   position: Webmaster
@@ -62,10 +60,10 @@
     Having seen the UC LIT’s outdated CMS and website design which hasn’t changed since 2013, I offered 
     to rewrite it from scratch using jekyll. Their website was perfect for jekyll because it was essentially
     static save for a couple pages which needed to be updated every couple months. The data for these pages 
-    could easily be stored on YAML files, to be loaded on site generation.
+    could easily be stored on YAML files, to be loaded on site generation.<br/>
 
     Since the generated site was now static and we removed the need for a dedicated CMS, we saved $120 per year 
-    on hosting fees by switching to github pages, an 88% decrease in website costs. 
+    on hosting fees by switching to github pages, an 88% decrease in website costs. <br/>
 
     Now the council can directly update about 80% of the content on the site without involving the webmaster, 
     by changing  the YAML files in the github repo. I’ve also included detailed guides on how to update each part of 
@@ -101,9 +99,7 @@
       website: "https://pages.github.com/"
       description: I used github pages for hosting the website. Using <a href="https://github.com/features/actions">Github Actions</a>, we are able to rebuild the website anytime we change its source. Also, github's in-browser file editor lets comissioners update the website without the need to clone the repo locally.
 
-  background: "#AD1A1A"
-  accent: "#921b1b"
-  foreground: "#FFFFFF"
+  accent: "#9d1818"
 
 - employer: Impact Conference
   position: 1st Place Winners
@@ -138,9 +134,7 @@
       website: "https://pages.github.com/"
       description: Since we store everything in Algolia and they take care of filtering functionality, the website is essentially static, allowing me to host it on github pages. You can find it <a href="https://gesarki.github.io/impact-conference">here</a>.
 
-  background: "#1b9bc3"
-  accent: "#2c8aa8"
-  foreground: "#FFFFFF"
+  accent: "#1b9bc3"
 
 - employer: Algosys (ION Group)
   position: C#/.NET Developer Co-op
@@ -207,9 +201,7 @@
       website: "#"
       description: I also got to practice my french in a completely french-speaking environment! I'm happy to say communication wasn't an issue during this co-op.
 
-  background: "#FFFFF"
-  accent: "#2e5cff"
-  foreground: "#002AC0"
+  accent: "#1c28ca"
 
 
 - employer: CIBC
@@ -244,6 +236,4 @@
       website: "#"
       description: This co-op was the first time I was thoroughly exposed to relational databases. I learned SQL queries and table manipulations in order to query and insert data for setting up tests.
 
-  background: "#B00B1C"
-  accent: "#921b1b"
-  foreground: "#FFFFFF"
+  accent: "#B00B1C"
