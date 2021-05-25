@@ -30,12 +30,10 @@
             AOS.init();
 
             let bubbleCols = document.getElementsByClassName('bubble-col');
-            let promiseList = new Array();
 
             bubblesAddHover(bubbleCols);
             await delay(600);
             bubblesRemoveHover(bubbleCols);
-            // Promise.all(promiseList);
         });
 
         const delay = ms => new Promise(res => setTimeout(res, ms));
