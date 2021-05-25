@@ -10,10 +10,14 @@
         {% for tech in work.technologies %}
 
         <div class="logo-rotate" style="--items:{{ forloop.length }}; --index:{{ forloop.index }};">
+        {% unless tech.custom-icon %}
         <span class="iconify tech-logo{% if tech.glowing %}glow{% endif %}" 
               data-icon="{{ tech.icon }}" 
               style="color: {{ work.accent }};"
               ></span>
+        {% else %}
+        <img class="tech-logo-img" src="{{ tech.icon }}" />
+        {% endunless %}
         </div>
 
         {% endfor %}

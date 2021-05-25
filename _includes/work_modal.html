@@ -52,7 +52,12 @@
                                 <div class="d-flex {% cycle " flex-row ", "flex-row-reverse " %} mb-3">
                                     <div class="p-2" data-bs-toggle="tooltip" title="{{ tech.name }}">
                                         <a href="{{ tech.website }}">
+                                            {% unless tech.custom-icon %}
                                             <span class="iconify tech-logo {% if tech.glowing %}glow{% endif %}" data-icon="{{ tech.icon }}" style="color: {{ include.work.accent }}"></span>
+                                            {% endunless %}
+                                            {% if tech.custom-icon %}
+                                            <img src="{{ tech.icon }}" class="tech-logo-img"/>
+                                            {% endif %}
                                         </a>
                                     </div>
                                     <div class="p-2">{{ tech.description }}</div>

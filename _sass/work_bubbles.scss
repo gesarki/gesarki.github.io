@@ -50,6 +50,10 @@
     .tech-logo {
         font-size: 3rem;
     }
+    .tech-logo-img {
+        width: 3rem;
+        height: 3rem;
+    }
     .hidden-popup {
         width: fit-content;
         position: absolute;
@@ -68,6 +72,30 @@
         opacity: 100%;
     }
     .bubble-col:hover {
+        height: 350px;
+    }
+    .bubble-col-hover .logo-rotate {
+        transform: rotate(calc((360/(var(--items))) * (var(--index)) * 1deg)) translate(0px, 150px);
+        // opacity: 100%;
+    }
+    .bubble-col-hover .bubble-image {
+        width: 250px;
+        height: 250px;
+        box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, .15)!important;
+        animation-name: hoverpulse;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .bubble-col-hover .hidden-popup.up {
+        top: -5%;
+        opacity: 100%;
+    }
+    .bubble-col-hover .hidden-popup.down {
+        top: 105%;
+        opacity: 100%;
+    }
+    .bubble-col-hover {
         height: 350px;
     }
     @keyframes rotations {

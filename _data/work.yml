@@ -1,3 +1,72 @@
+- employer: Personal Project
+  position: NFT Marketplace
+  from-to: May 2020 - Feb 2021
+  description: |
+    I've been meaning to get into crypto for a while now, so as an introductory project I made an NFT marketplace!
+    <br/>
+    <br/>
+    Using <a href="https://github.com/OpenZeppelin/openzeppelin-contracts">OpenZeppelin's</a> secure smart contract library
+    as a starting point, I created an <a href="http://erc721.org/">ERC721</a> smart contract allowing anyone with an 
+    ethereum address to mint and transfer ownership of tokens. I then created an "escrow" contract, to which you
+    can transfer your token to, along with a selling price, and it will list it for sale. When a user calls its
+    <code>purchase</code> function along with the correct amount of ETH, it transfers ownership of the token to
+    the buyer, and the ETH to the seller.
+    <br/>
+    <br/>
+    The front-end react app just displays all tokens ever minted with the token contract, and gives different selling, buying
+    and options to update the price depending on who owns the token.
+    <br/>
+    <br/>
+    In the future I plan to implement <a href="https://docs.openzeppelin.com/learn/sending-gasless-transactions">gasless transactions</a>,
+    so users can mint new tokens and put them up for sale without having to pay a gas fee.
+    <br/>
+    <br/>
+    Check out the marketplace and try minting a token! You'll need a browser wallet such as <a href="https://metamask.io">Metamask</a> 
+    and switch to the Ropsten test network. To make transactions you can get a some ETH from a Ropsten faucet like
+    <a href="https://faucet.dimensions.network/">this one</a>.
+    <br/>
+    <br/>
+    <a href="https://shopifty-gateway.netlify.app/">shopifty-gateway.netlify.app</a>
+    <br/>
+    <br/>
+    Happy blockchaining!
+
+
+  thumbnail: assets/images/shopifty-gateway/thumbnail.webp
+
+  images:
+    - image: assets/images/shopifty-gateway/homepage.webp
+      label: Gallery of all tokens
+      description: The homepage displays all tokens and their owner's address. If the image belongs to the current user, they have the option to list it for sale or update its price.
+    - image: assets/images/shopifty-gateway/metamask-details.webp
+      label: Transaction
+      description: When making a transaction such as minting, buying or selling a token, metamask or whichever ethereum wallet provider you use asks for confirmation.
+    - image: assets/images/shopifty-gateway/metamask-data.webp
+      label: Transaction data
+      description: Metamask also shows transaction data when interacting with a contract, showing you exactly which contract function you are calling and what's being sent.
+    
+  technologies:
+    - icon: cib-ethereum
+      name: Ethereum blockchain network
+      website: "https://ethereum.org/en/"
+      description: Ethereum was used for its smart contracts, that allow for trustless, decentralized transactions and reaching concensus.
+    - icon: assets/images/shopifty-gateway/openZeppelin.svg
+      name: OpenZeppelin
+      website: "https://openzeppelin.com/"
+      description: I used OpenZeppelin's smart contracts library as a starting point to ensure the contracts I would use were secure.
+      custom-icon: true
+    - icon: assets/images/shopifty-gateway/web3.jpeg
+      name: web3js
+      website: "https://web3js.readthedocs.io/en/v1.3.4/"
+      description: Web3 js was used in the front end to connect to the ethereum network, connect to the smart contracts and make/sign transactions.
+      custom-icon: true
+    - icon: cib-react
+      name: React
+      website: "https://reactjs.org/"
+      description: I used React and Bootstrap to quickly whip up a responsive front end.
+    
+  accent: "#00a943"
+
 - employer: LIVE Competition
   position: VP of Engineering
   from-to: May 2020 - Feb 2021
