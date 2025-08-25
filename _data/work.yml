@@ -1,3 +1,13 @@
+- employer: Ada Support
+  position: Associate Site Reliability Engineer
+  from-to: Jul 2021 - Aug 2022
+  description: |
+    - Collaborated with the entire engineering organization to establish and deploy new services, utilizing Terraform to create safe, reproducible modules
+    - Leveraged Sentry to investigate bugs, track latency and gather data for incident postmortems
+
+
+  thumbnail: assets/images/ada/ada-support.jpg
+
 - employer: Personal Project
   position: NFT Marketplace
   from-to: May 2020 - Feb 2021
